@@ -1,0 +1,532 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*fonts varibles*/
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+body a {
+  text-decoration: none;
+}
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  margin-bottom: 15rem;
+}
+body header a {
+  font-family: "Open Sans", sans-serif;
+  color: hsl(322, 100%, 66%);
+  border: 1px solid hsl(322, 100%, 66%);
+  border-radius: 3rem;
+  padding: 0.6em 3rem;
+  -webkit-box-shadow: 0px 0px 5px hsl(321, 100%, 78%);
+          box-shadow: 0px 0px 5px hsl(321, 100%, 78%);
+}
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body main article a {
+  background-color: hsl(322, 100%, 66%);
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding: 1.5rem 5rem;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.158);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.158);
+}
+body main article a:hover {
+  background-color: hsl(321, 100%, 78%);
+}
+body main > article:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10rem;
+}
+body main > article:nth-child(1) section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+body main > article:nth-child(1) section h1 {
+  padding: 0 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+}
+body main > article:nth-child(1) section p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  color: hsl(192, 100%, 9%);
+  margin: auto;
+  max-width: 45rem;
+}
+body main article:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "p p" "s1 s2";
+  margin-bottom: 10rem;
+  row-gap: 10rem;
+}
+body main article:nth-child(2) > img {
+  grid-area: p;
+}
+body main article:nth-child(2) > section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 280px;
+}
+body main article:nth-child(2) > section > img {
+  width: 60px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+body main article:nth-child(2) > section h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+}
+body main article:nth-child(2) > section p {
+  font-family: "Open Sans", sans-serif;
+  color: hsl(192, 100%, 9%);
+}
+body main article:nth-child(2) > section:nth-child(2) {
+  justify-self: start;
+  grid-area: s1;
+}
+body main article:nth-child(2) > section:nth-child(3) {
+  justify-self: end;
+  grid-area: s2;
+}
+body main article:nth-child(3) {
+  width: 100%;
+}
+body main article:nth-child(3) img:first-child {
+  width: 100%;
+}
+body main article:nth-child(3) img:last-child {
+  width: 100%;
+}
+body main article:nth-child(3) > section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "t p";
+  background-color: hsl(207, 100%, 98%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body main article:nth-child(3) > section > section:nth-child(1) {
+  padding: 5rem 0 5rem 5rem;
+  grid-area: t;
+}
+body main article:nth-child(3) > section > section:nth-child(1) h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+}
+body main article:nth-child(3) > section > section:nth-child(1) p {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  max-width: 46rem;
+}
+body main article:nth-child(3) > section > section:nth-child(2) {
+  padding: 5rem 5rem 5rem 0;
+  grid-area: p;
+}
+body main article:nth-child(4) {
+  width: 100%;
+}
+body main article:nth-child(4) > section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "p t";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body main article:nth-child(4) > section > section:nth-child(1) {
+  padding: 5rem 0 5rem 5rem;
+  grid-area: p;
+}
+body main article:nth-child(4) > section > section:nth-child(2) {
+  padding: 5rem 5rem 5rem 0;
+  grid-area: t;
+  justify-self: center;
+}
+body main article:nth-child(4) > section > section:nth-child(2) h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+}
+body main article:nth-child(4) > section > section:nth-child(2) p {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  max-width: 46rem;
+}
+body main article:nth-child(5) {
+  width: 100%;
+  margin-bottom: 10rem;
+}
+body main article:nth-child(5) img:first-child {
+  width: 100%;
+}
+body main article:nth-child(5) img:last-child {
+  width: 100%;
+}
+body main article:nth-child(5) > section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "t p";
+  background-color: hsl(207, 100%, 98%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body main article:nth-child(5) > section > section:nth-child(1) {
+  padding: 5rem 0 5rem 5rem;
+  grid-area: t;
+}
+body main article:nth-child(5) > section > section:nth-child(1) h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+}
+body main article:nth-child(5) > section > section:nth-child(1) p {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  max-width: 46rem;
+}
+body main article:nth-child(5) > section > section:nth-child(2) {
+  padding: 5rem 5rem 5rem 0;
+  grid-area: p;
+}
+body main article:nth-child(6) {
+  margin-bottom: 5rem;
+}
+body main article:nth-child(6) > section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body main article:nth-child(6) > section h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+body main article:nth-child(6) > section a {
+  text-align: center;
+}
+body footer {
+  width: 100%;
+}
+body footer > img {
+  width: 100%;
+}
+body footer > article {
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "l r";
+  background-color: hsl(192, 100%, 9%);
+  color: #ffffff;
+}
+body footer > article > section:nth-child(1) {
+  grid-area: l;
+}
+body footer > article > section:nth-child(1) section:first-child img {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(206deg) brightness(109%) contrast(101%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(206deg) brightness(109%) contrast(101%);
+  margin-bottom: 2rem;
+}
+body footer > article > section:nth-child(1) p {
+  font-family: "Open Sans", sans-serif;
+  max-width: 20rem;
+}
+body footer > article > section:nth-child(1) section:nth-child(2) {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "pi pt" "ei et";
+  margin-top: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 0.5rem;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  margin-bottom: 4rem;
+}
+body footer > article > section:nth-child(1) section:nth-child(2) img:first-of-type {
+  grid-area: pi;
+}
+body footer > article > section:nth-child(1) section:nth-child(2) img:last-of-type {
+  grid-area: ei;
+}
+body footer > article > section:nth-child(1) section:nth-child(2) p:first-of-type {
+  grid-area: pt;
+}
+body footer > article > section:nth-child(1) section:nth-child(2) p:first-of-type {
+  grid-area: et;
+}
+body footer > article > section:nth-child(1) section:nth-child(3) {
+  max-width: 10rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+body footer > article > section:nth-child(1) section:nth-child(3) .i {
+  font-size: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+body footer > article > section:nth-child(1) section:nth-child(3) .i:hover {
+  cursor: pointer;
+}
+body footer > article > section:nth-child(1) section:nth-child(3) .i.s:hover {
+  color: hsl(322, 100%, 66%);
+}
+body footer > article > section:nth-child(1) section:nth-child(3) .i.f:hover {
+  color: rgb(57, 57, 197);
+}
+body footer > article > section:nth-child(1) section:nth-child(3) .i.x:hover {
+  color: black;
+}
+body footer > article > section:last-of-type {
+  justify-self: end;
+  grid-area: r;
+  cursor: pointer;
+}
+body footer > article > section:last-of-type h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+body footer > article > section:last-of-type p {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 3rem;
+  max-width: 23rem;
+}
+body footer > article > section:last-of-type input[type=email] {
+  border-radius: 0.7rem;
+  height: 3rem;
+  width: 20rem;
+  margin-right: 2rem;
+  padding-left: 1rem;
+}
+body footer > article > section:last-of-type input[type=email]:hover {
+  cursor: pointer;
+}
+body footer > article > section:last-of-type input[type=submit] {
+  background-color: hsl(322, 100%, 66%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.7rem;
+  border: none;
+  height: 3rem;
+  width: 10rem;
+}
+body footer > article > section:last-of-type input[type=submit]:hover {
+  cursor: pointer;
+  background-color: hsl(321, 100%, 78%);
+}
+
+@media (max-width: 1200px) {
+  body header {
+    padding: 2rem;
+    margin-bottom: 5rem;
+  }
+  body header a {
+    font-family: "Open Sans", sans-serif;
+    color: hsl(322, 100%, 66%);
+    border: 1px solid hsl(322, 100%, 66%);
+    border-radius: 3rem;
+    padding: 0.6em 2rem;
+    -webkit-box-shadow: 0px 0px 5px hsl(321, 100%, 78%);
+            box-shadow: 0px 0px 5px hsl(321, 100%, 78%);
+  }
+  body main article:nth-child(1) section h1 {
+    padding: 0 1rem;
+    font-size: 2.5rem;
+  }
+  body main article:nth-child(2) {
+    grid-template-areas: "p p" "s1 s1" "s2 s2";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 10rem;
+  }
+  body main article:nth-child(2) > section:nth-child(2),
+  body main article:nth-child(2) section:nth-child(3) {
+    justify-self: center;
+  }
+  body main article:nth-child(3) > section {
+    grid-template-areas: " p p" "t t ";
+  }
+  body main article:nth-child(3) > section > section:nth-child(1) {
+    padding: 1rem;
+    text-align: center;
+  }
+  body main article:nth-child(3) > section > section:nth-child(1) h2 {
+    font-size: 2.4rem;
+  }
+  body main article:nth-child(3) > section > section:nth-child(1) p {
+    font-size: 1rem;
+  }
+  body main article:nth-child(3) > section > section:nth-child(2) {
+    padding: 3rem 1rem;
+  }
+  body main article:nth-child(4) > section {
+    grid-template-areas: " p p" "t t ";
+  }
+  body main article:nth-child(4) > section > section:nth-child(2) {
+    padding: 1rem;
+    text-align: center;
+  }
+  body main article:nth-child(4) > section > section:nth-child(2) h2 {
+    font-size: 2.4rem;
+  }
+  body main article:nth-child(4) > section > section:nth-child(2) p {
+    font-size: 1rem;
+  }
+  body main article:nth-child(4) > section > section:nth-child(1) {
+    padding: 3rem 1rem;
+  }
+  body main article:nth-child(5) section {
+    grid-template-areas: " p p" "t t ";
+  }
+  body main article:nth-child(5) section > section:nth-child(1) {
+    grid-area: t;
+    padding: 1rem;
+    text-align: center;
+  }
+  body main article:nth-child(5) section > section:nth-child(1) h2 {
+    font-size: 2.4rem;
+  }
+  body main article:nth-child(5) section > section:nth-child(1) p {
+    font-size: 1rem;
+  }
+  body main article:nth-child(5) section > section:nth-child(2) {
+    padding: 3rem 1rem;
+  }
+  body main article:nth-child(6) > section {
+    text-align: center;
+  }
+  body main article:nth-child(6) > section h2 {
+    font-size: 1.6rem;
+  }
+  body footer > article {
+    padding: 5rem 2rem 2rem 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "r" "l";
+  }
+  body footer > article section:nth-child(1) {
+    margin-top: 3rem;
+  }
+  body footer > article > section:last-of-type input[type=submit] {
+    margin-top: 2rem;
+  }
+}
