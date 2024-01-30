@@ -397,6 +397,11 @@ body {
       margin-bottom: 5rem;
     }
     main {
+      article {
+        a {
+          font-size: 1.5rem;
+        }
+      }
       article:nth-child(1) {
         section {
           h1 {
