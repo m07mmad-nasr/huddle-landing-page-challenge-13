@@ -18,12 +18,12 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 
 #### Mobile
 
-![Mobile](<./127.0.0.1_5500_index.html%20(1).png)
+![Mobile](<./127.0.0.1_5500_index.html%20(1).png>)
 
 ### Links
 
 - Solution URL: [Solution](https://github.com/m07mmad-nasr/huddle-landing-page-challenge-13)
-- Live Site URL: [Live Site](soon)
+- Live Site URL: [Live Site](https://huddle-landing-page-challenge-13.vercel.app/)
 
 ## My process
 
